@@ -37,3 +37,58 @@
 
 ## 전체 강의 시간
 **총 시간: 263:49 (4시간 23분 49초)**
+
+## 최근 깃(Git) 명령어 수행 내역
+
+---
+
+### 1. 깃 저장소 초기화
+```
+git init
+```
+- 현재 작업 디렉토리를 깃 저장소로 초기화함
+
+### 2. 전체 파일 스테이징
+```
+git add .
+```
+- 모든 변경 파일을 스테이징 영역에 추가함
+
+### 3. 커밋 생성
+```
+git commit -m "파트4 강의 교재 및 스크립트 실습 프롬프트 추가 및 실전 흐름 반영"
+```
+- 변경 내용을 하나의 커밋으로 저장함
+
+### 4. 원격 저장소 등록 및 변경
+```
+# 이후 오리진을 levelupcode1 계정으로 변경
+
+git remote set-url origin https://github.com/levelupcode1/ai-education.git
+```
+- 깃헙 원격 저장소를 origin 이름으로 등록 후, levelupcode1 계정의 저장소로 변경함
+
+### 5. 기본 브랜치명(main)으로 변경
+```
+git branch -M main
+```
+- 브랜치명을 main으로 변경하여 깃헙 표준에 맞춤
+
+### 6. 원격 저장소로 푸시
+```
+git push -u origin main
+```
+- 로컬 커밋을 깃헙 원격 저장소(levelupcode1/ai-education)에 성공적으로 푸시함
+- ✅ 푸시 완료 및 브랜치 연동 완료
+
+### 7. 불필요한 파일 삭제
+```
+git rm --cached .DS_Store
+git commit -m ".DS_Store 파일 원격 저장소에서 삭제"
+git push
+```
+- 로컬에서 불필요한 파일을 삭제한 후, 깃헙에서도 해당 파일을 삭제함
+
+---
+
+> **참고:** 이제 모든 강의 자료와 변경 이력이 깃헙 levelupcode1/ai-education 저장소에 안전하게 반영됨
